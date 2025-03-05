@@ -1,0 +1,203 @@
+/* categories.css */
+
+/* Style pour la liste des catégories */
+.category-list {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-item {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.category-item:hover {
+    background-color: var(--hover-color);
+}
+
+.category-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.category-icon {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.category-count {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.category-actions {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.action-btn {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.action-btn:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.view-btn:hover {
+    color: var(--info-color);
+}
+
+.rename-btn:hover {
+    color: var(--warning-color);
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+}
+
+/* Style pour l'état vide */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.empty-message {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Style pour les modals */
+.modal-content {
+    max-width: 500px;
+}
+
+.confirmation-message {
+    margin-bottom: 1.5rem;
+    color: var(--danger-color);
+    font-weight: 500;
+}
+
+.radio-group {
+    margin-bottom: 1.5rem;
+}
+
+.sub-option {
+    margin-left: 1.5rem;
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border-color);
+}
+
+/* Ajustements pour le responsive */
+@media (max-width: 768px) {
+    .category-header {
+        display: none;
+    }
+    
+    .category-item {
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 3rem;
+    }
+    
+    .category-name {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    .category-count {
+        width: auto;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+    }
+    
+    .category-actions {
+        width: 100%;
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        justify-content: flex-end;
+        padding: 0 1rem;
+    }
+}
+
+/* Animation de transition pour les modals */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: modalFadeIn 0.3s;
+}
+
+/* Styles pour les alertes */
+.alert {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.alert-success {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+}
+
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--danger-color);
+    border-left: 4px solid var(--danger-color);
+}
+
+/* Style pour les badges */
+.category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 0.25rem;
+    background-color: #e9ecef;
+    color: var(--text-color);
+}

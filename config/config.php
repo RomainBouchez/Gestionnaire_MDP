@@ -2,7 +2,7 @@
 // config/config.php
 define('APP_NAME', 'SecurePass Manager');
 define('APP_VERSION', '1.0.0');
-define('BASE_URL', 'http://localhost/password-manager');
+define('BASE_URL', 'http://localhost/ESIEA/Gestionnaire_MDP');
 define('ROOT_PATH', dirname(__DIR__) . '/');
 define('INCLUDE_PATH', ROOT_PATH . 'includes/');
 define('CLASS_PATH', ROOT_PATH . 'classes/');
